@@ -1,7 +1,7 @@
 {
-  "name": "nestjs-nx-worker-thread-example",
+  "name": "app",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/nestjs-nx-worker-thread-example/src",
+  "sourceRoot": "apps/app/src",
   "projectType": "application",
   "tags": [],
   "targets": {
@@ -20,17 +20,17 @@
     "serve": {
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
-      "dependsOn": ["build"],
+      "dependsOn": ["^build"],
       "options": {
-        "buildTarget": "nestjs-nx-worker-thread-example:build",
+        "buildTarget": "app:build",
         "runBuildTargetDependencies": false
       },
       "configurations": {
         "development": {
-          "buildTarget": "nestjs-nx-worker-thread-example:build:development"
+          "buildTarget": "app:build:development"
         },
         "production": {
-          "buildTarget": "nestjs-nx-worker-thread-example:build:production"
+          "buildTarget": "app:build:production"
         }
       }
     }

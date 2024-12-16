@@ -3,18 +3,29 @@
   "compilerOptions": {
     "rootDir": ".",
     "sourceMap": true,
-    "declaration": false,
+    "declaration": true,
+    "removeComments": true,
+    "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2015",
-    "module": "esnext",
+    "target": "es2017",
+    "module": "commonjs",
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "incremental": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@app/other": ["libs/other/src/index.ts"],
+      "@app/worker": ["libs/worker/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

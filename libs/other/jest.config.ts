@@ -1,10 +1,10 @@
 export default {
-  displayName: 'nestjs-nx-worker-thread-example',
+  displayName: 'other',
   preset: '../../jest.preset.js',
   testEnvironment: 'node',
   transform: {
     '^.+\\.[tj]s$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.spec.json' }],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/apps/nestjs-nx-worker-thread-example',
+  coverageDirectory: '../../coverage/libs/other',
 };

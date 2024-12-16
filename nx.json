@@ -35,7 +35,15 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": ["apps/nestjs-nx-worker-thread-example-e2e/**/*"]
+      "exclude": ["apps/app-e2e/**/*"]
     }
-  ]
+  ],
+  "defaultProject": "app",
+  "targetDefaults": {
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    }
+  }
 }
